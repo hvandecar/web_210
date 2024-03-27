@@ -1,0 +1,103 @@
+@media all {
+
+  :root {
+    --primary-bg-color: #502712;
+    --primary-txt-color: #fff;
+    --secondary-txt-color: #000;
+    --primary-fonts: 'PT Sans', sans-serif;
+    --img-background: center/ cover no-repeat;
+  }
+
+  header, footer, nav, aside, article, section {display: block;}
+  body {margin: 0; padding: 0;}
+  .hiddenText {height: 0; width: 0; font-size: 0;}
+  abbr {text-decoration: none !important;}
+  a:focus {outline: 2px solid var(--primary-bg-color); outline-offset: 3px;}
+
+}
+
+@media screen {
+
+  body {font: 400 18px/1.3 var(--primary-fonts); color: var(--primary-txt-color);}
+
+  #jumpLink {position: absolute; top: -9999px; color: #fff;}
+  #jumpLink:focus {top: 10px; left: 10px; outline: 2px solid var(--primary-bg-color); outline-offset: 3px; color: var(--secondary-txt-color);}
+
+/* masthead */
+
+  #masthead {padding: 30px 0;}
+  header {border-bottom: 20px solid var(--primary-bg-color);}
+  header #navItemL a, header #navItemR a {font-size: 16px; color: var(--primary-bg-color);}
+  header .row ul {margin: 0; padding: 0;}
+  header .row li {list-style: none; display: inline-block;}
+  header #navItemL a {padding-right: 30px;}
+  header #navItemR a {padding-left: 30px;}
+  header #navItemR {float: right;}
+  header #navItemL a:hover, header #navItemR a:hover {color: var(--secondary-txt-color);}
+  header img {height: auto; max-width: 100%; display: block; margin: 0 auto;}
+  header select {display: block; width: 100%; margin-bottom: 30px; background: #F2F3F5}
+
+/* content area */
+
+  #bgImg1 {background: url(../i/caturra-coffee-hero-image.webp) var(--img-background); height: 474px; margin-bottom: 60px;}
+  .brownBox {background: var(--primary-bg-color); text-align: center; padding: 40px 20px; height: 280px;}
+  .brownBox h1 {font: 700 24px/1.3 var(--primary-fonts);}
+  .brownBox p {line-height: 1.8; margin-bottom: 25px;}
+  .brownBox a {color: var(--primary-txt-color); margin-top: 20px;}
+  .brownBox a:focus {outline: 2px solid var(--primary-txt-color); outline-offset: 3px;}
+  #bgImg2 {background: url(../i/caturra-coffee-view-to-street.webp) var(--img-background); height: 590px; margin: 60px 0 100px;}
+
+/* new menu items */
+
+  #menuTips {border-top: 1px solid var(--primary-bg-color);}
+  #menuHdr {background: var(--primary-bg-color);}
+  #menuTips h1 {font-size: 28px; text-align: center; padding: 25px 0; margin-top: -45px;}
+  #menuTips h2 {font-size: 22px; color: var(--primary-bg-color); padding-bottom: 15px; margin: 0;}
+  #menuTips .row {padding-bottom: 60px; border-bottom: 1px solid var(--primary-bg-color);}
+  .items {margin-top: 45px;}
+  .price {color: var(--secondary-txt-color); padding-bottom: 15px;}
+  .price p {display: inline; margin: 0;}
+  .price p:nth-child(2) {float: right;}
+  #menuTips img {max-width: 100%; margin: 60px auto; display: block;}
+
+/* footer */
+
+  footer {background: var(--primary-bg-color); font-size: 16px; color: var(--primary-txt-color); text-decoration: none;}
+  footer .row {padding: 50px 0 30px;}
+  #socialMedia {background: url(../i/social-media-icons.webp) top left no-repeat; width: 181px; height: 52px; margin-bottom: 15px;}
+  #socialMedia a {width: 55px; height: 52px; display: inline-block;}
+  #socialMedia a:focus {outline: 2px solid var(--primary-txt-color); outline-offset: 3px;}
+
+}
+
+@media screen and (max-width: 1070px) {
+
+  header #navItemL a {padding-right: 20px;}
+  header #navItemR a {padding-left: 20px;}
+
+}
+
+@media screen and (max-width: 992px) {
+
+  .brownBox {height: auto; margin-bottom: 30px;}
+  footer .row div {padding-bottom: 30px;}
+  footer .row {padding: 50px 0 0 0;}
+}
+
+@media screen and (max-width: 768px) {
+
+  #menuTips img div {padding: 0 15px;}
+}
+
+@media print {
+
+  a {color: var(--secondary-txt-color);}
+  body {font: 400 15pt/1.3 var(--primary-fonts)}
+  h1 {font-size: 20pt;}
+  h2 {font-size: 17pt;}
+  header, main, .addy{margin-bottom: 40pt;}
+  #menuTips {margin-bottom: 150pt;}
+  #menuTips img, #jumpLink, select {display: none;}
+  .price p {display: inline; margin: 0;}
+  .price p:nth-child(2) {float: right;}
+}
