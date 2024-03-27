@@ -1,0 +1,14 @@
+body {background: blue;}
+#aniArea {background: white; width: 1000px; height: 200px; margin: 0 auto; overflow: hidden;}
+#horizontal {animation: horizontal 4s linear infinite;}
+#bird {width: 60.5px; height: 55px; background: url(../i/bird-movement.png) no-repeat; padding-top: 127.5px; animation: bird .25s steps(14) infinite;}
+
+@keyframes bird {
+  from {background-position: 0;}
+  to {background-position: -847px;}
+}
+
+@keyframes horizontal {
+  from {transform: translateX(-60.5px)}
+  to {transform: translateX(1060.5px)}
+}

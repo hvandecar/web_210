@@ -1,0 +1,106 @@
+@media all {
+
+  :root {
+    --primary-bg-color: #2a2a2a;
+    --primary-txt-color: #fff;
+    --secondary-bg-color: #fff;
+    --secondary-txt-color: #000;
+    --primary-fonts: 'Roboto', sans-serif;
+    --secondary-fonts: 'Noto Serif', serif;
+  }
+
+  header, footer, nav, aside, article, section {display: block;}
+  body {margin: 0; padding: 0;}
+  #masthead h1 {margin: 0; font: 700 34px var(--secondary-fonts);}
+
+}
+
+
+@media screen {
+
+  body {font: 400 100%/1.4 var(--primary-fonts);}
+  h2 {font: 400 180%/1.4 var(--primary-fonts);}
+  h3 {font: 700 140%/1.4 var(--primary-fonts);}
+  footer {font-size: 90%; text-align: center; background: var(--primary-bg-color); color: var(--primary-txt-color); padding: 15px 0;}
+  .flex {display: flex; justify-content: space-between;}
+  .wrap {flex-wrap: wrap;}
+
+  /* masthead and top of content area */
+  #masthead {padding: 37px 0 35px;; background: var(--primary-bg-color); color: var(--primary-txt-color); border-bottom: 1px solid #aaa;}
+  #masthead div nav {float: right;}
+  #masthead h1 {margin-top: 5px;}
+  #masthead nav ul {list-style: none; margin: 0; padding: 0;}
+  #masthead nav li {margin-left: 10px;}
+  #masthead nav ul a, #pageContent .actionBtn {margin-top: 7px; color: var(--primary-txt-color); font-weight: 500; text-decoration: none; display: inline-block; padding: 8px 16px; border-radius: 12px;}
+  #pageContent .actionBtn {background: #ccc; color: var(--secondary-txt-color); padding: 12px 20px; font-size: 120%;}
+  #masthead nav ul a:hover, #masthead nav ul a:focus, #pageContent .actionBtn:hover, #pageContent .actionBtn:focus {background: var(--secondary-bg-color); color: var(--secondary-txt-color);}
+  #pageContent {padding: 30px 0; background: var(--primary-bg-color); color: var(--primary-txt-color); overflow: auto;}
+  #homeFeature {border: 7px solid #6b6b6b; border-radius: 50%; width: 375px; height: 375px; background: url(../i/maple-leaves-background.webp) no-repeat center; background-size: cover; float: right;}
+  #homeFeatureHolder {justify-self: end;}
+  #navMenuTrigger {display: none; margin-top: 7px; color: var(--primary-txt-color); text-decoration: none;}
+
+  /* tours */
+  #galleryHdr {text-align: center; padding: 20px 0 12px;}
+  #tourGallery {background: #ccc; overflow: auto; padding: 30px 0 50px;}
+  .tour {position: relative; top: 0; left: 0; border: 5px solid var(--primary-txt-color); box-sizing: border-box; height: 200px; display: block; margin-bottom: 24px;}
+  .tour span {position: absolute; bottom: 0; width: 100%; padding: 5px 0; background: rgba(0,0,0,0.6); color: var(--primary-txt-color); text-align: center;}
+  .tour em {font-size: 0px; width: 0; height: 0;}
+  #fallTour {background: url(../i/fall-tour.webp) top left no-repeat; background-size: cover;}
+  #winterTour {background: url(../i/winter-tour.webp) top left no-repeat; background-size: cover;}
+  #springTour {background: url(../i/spring-tour.webp) center no-repeat; background-size: cover;}
+  #summerTour {background: url(../i/summer-tour.webp) center no-repeat; background-size: cover;}
+  #forestTour {background: url(../i/forest-tour.webp) center no-repeat; background-size: cover;}
+  #mountainTour {background: url(../i/mountain-tour.webp) center no-repeat; background-size: cover;}
+  #islandTour {background: url(../i/island-tour.webp) bottom center no-repeat; background-size: cover;}
+  #streamTour {background: url(../i/stream-tour.webp) center no-repeat; background-size: cover;}
+
+  /* services */
+  #services {text-align: center; padding: 30px 0 50px;}
+  #servicesHdr {padding: 20px 0 11px;}
+  .service {text-decoration: none; background: var(--primary-bg-color); color: var(--primary-txt-color); border: 5px solid var(--primary-bg-color); padding: 20px; display: block; margin-bottom: 25px;}
+  .service .fa-solid {display: block; height: 50px;}
+  .service:hover, .service:focus {background: var(--primary-txt-color); color: var(--primary-bg-color);}
+
+}
+
+
+@media screen and (max-width: 992px) {
+
+  #homeFeature {float: none; height: 300px; width: 300px; margin: 20px auto;}
+
+
+}
+
+
+@media screen and (max-width: 800px) {
+
+  .adventureGrid, .serviceGrid {grid-template-columns: repeat(2, 1fr);}
+  #pageContent > div.grid {display: block;}
+  #homeFeature {width: 300px; height: 300px; margin: 50px auto 20px;}
+  #navMenuTrigger {display: inline-block;}
+  header nav li {display: none;}
+
+}
+
+
+@media screen and (max-width: 500px) {
+
+  #masthead h1 {font-size: 25px;}
+  .adventureGrid, .serviceGrid {grid-template-columns: 1fr;}
+
+}
+
+
+@media print {
+
+  body {font: 400 14pt/1.4 var(--secondary-fonts); color: var(--secondary-txt-color);}
+  h2 {font: 400 20pt/1.4 var(--secondary-fonts);}
+  h3 {font: 400 17pt/1.4 var(--secondary-fonts);}
+  #masthead nav, .tour em {display: none;}
+  #masthead h1 {font-size: 24pt;}
+  footer {font-size: 11pt; margin-top: 30pt;}
+  #pageContent {margin: 30pt 0;}
+  .tour, .service {display: block; margin: 10pt 0;}
+  a {color: var(--secondary-txt-color);}
+
+}
